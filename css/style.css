@@ -1,0 +1,62 @@
+
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+
+nav {
+	background-color: darkorange;
+	height: 150px;
+	margin: 0;
+}
+
+
+.forms {
+	margin-left: 60px;
+}
+
+
+/***************** Section 1: Customer Info *****************/
+
+.cust-info {
+	margin-left: 130px;
+}
+
+.forms {
+	border-radius: 4px;
+}
+
+.controls {
+
+}
+
+
+
+/***************** Section 2: Timber List *****************/
+
+.timber-list {
+	margin-top: 50px;
+	margin-left: 130px;
+}
+.enter-item {
+	border-radius: 4px;
+	margin-left: 60px;
+ }
+
+
+
+
+
+
+/***************** Section 3: Get Quote *****************/
+
+.get-quote {
+	margin-top: 50px;
+}
+
+.btn {
+	background-color: darkorange;
+	text-align: center;
+}
