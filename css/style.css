@@ -6,6 +6,18 @@
 }
 
 
+
+body {
+/*max-width: 100%;
+margin: 0 auto !important;*/
+/*	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;*/
+
+}
+
+
 nav {
 	background-color: darkorange;
 	height: 150px;
@@ -13,50 +25,291 @@ nav {
 }
 
 
-.forms {
+/*.forms {
 	margin-left: 60px;
-}
+}*/
 
 
 /***************** Section 1: Customer Info *****************/
 
-.cust-info {
-	margin-left: 130px;
+.cust-header {
+	margin-left: 20px;
 }
 
-.forms {
-	border-radius: 4px;
+
+.left-input {
+	width: 45%;
+	height: 210px;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 15px;
+}
+
+
+.right-input {
+	width: 45%;
+	height: 210px;
+	box-sizing: border-box;
+	float: right;
+
+}
+
+
+
+form {
+	font-size: 28px;
+}
+
+.input1 {
+	width: 90%;
+}
+.input2 {
+	width: 90%;
+}
+.input3 {
+	width: 90%;
+}
+.input4 {
+	width: 90%;
+}
+.input5 {
+	width: 90%;
+}
+
+.input6 {
+	height: 110px;
+	margin-top: 10px;
+	resize: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	line-height: 100%;
+	border-bottom: solid 1px gray;
+	width: 90%;
+}
+
+
+.control-label {
+	font-size: 28px;
+}
+
+
+input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 1px gray;
+	height: 32px;
+}
+
+
+
+/*input[type=text]:focus, textarea:focus {
+	box-shadow: 0 0 5px darkorange;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid darkorange;
+}*/
+
+input:focus {
+    border-color: #cfdc00;
+    box-shadow: 0 0 5px darkorange;
+}
+
+
+
+.cust-info {
+	/*text-align: center;*/
+}
+
+.control-label {
+/*	margin-right: 25px;*/
 }
 
 .controls {
 
 }
 
+.timber-header {
+	margin-left: 15px;
+	clear: both;
+}
 
 
-/***************** Section 2: Timber List *****************/
+/***************** Section 2: Timber Details *****************/
+
+/*.modal-body {
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}*/
+
+
+.modal-content {
+	width: 900px;
+	text-align: left;
+}
+
+/*.timber-details {
+	height: 100%;
+}*/
+
+.pop-up {
+	text-align: center;
+}
+
+.option-dropdowns {
+	list-style: none;
+	text-decoration: none;
+	position: absolute;
+/*	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;*/
+}
+
+
+
+.option-dropdowns > li {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 10px;
+	background-color: blue;
+	color: blue;
+	height: 30px;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+/*	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;*/
+}
+
+.dropdown-toggle:hover {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+
+	text-align: center;
+}
+
+
+
+
+
+/*.left-details {
+	width: 45%;
+	height: 150px;
+	margin-left: 15px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.right-details {
+	width: 45%;
+	height: 150px;
+	box-sizing: border-box;
+	float: right;
+}
+
+.input7 {
+	width: 93.2%;
+}
+.input8 {
+	width: 58.1%;
+}
+.input9 {
+	width: 60.1%;
+}
+.input10 {
+	width: 85%;
+}*/
+
+
+/***************** Section 3: Timber List *****************/
+
 
 .timber-list {
 	margin-top: 50px;
-	margin-left: 130px;
+
 }
-.enter-item {
-	border-radius: 4px;
-	margin-left: 60px;
+
+.control-group {
+	clear: both;
+
+}
+
+.left-tim-input {
+	width: 45%;
+	height: 110px;
+	box-sizing: border-box;
+	margin-left: 15px;
+	float: left;
+	text-align: center;
+}
+
+
+.right-tim-input {
+	width: 45%;
+	height: 110px;
+	box-sizing: border-box;
+	float: right;
+	text-align: center;
+}
+
+.tim-write {
+	margin-left: 10px;
+}
+
+.input11 {
+	width: 90%;
+}
+
+.input12 {
+	width: 90%;
+}
+
+
+/*input:focus {
+    border-color: #cfdc00;
+    box-shadow: 0 0 5px darkorange;
  }
-
-
-
-
+*/
 
 
 /***************** Section 3: Get Quote *****************/
 
+
+
 .get-quote {
 	margin-top: 50px;
+	text-align: center;
+	clear: both;
 }
 
-.btn {
+/*.mod-button {
+}*/
+
+
+.my-btn {
 	background-color: darkorange;
 	text-align: center;
+	height: 46px;
+	width: 122px;
+	color: white;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border: 1px solid transparent;
+    border-radius: 6px;
 }
+
+.my-btn:hover {
+	background-color: #ff7700;
+}
+
