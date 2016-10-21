@@ -8,8 +8,8 @@
 
 
 body {
-/*max-width: 100%;
-margin: 0 auto !important;*/
+max-width: 100%;
+margin: 0 auto !important;
 /*	max-width: 100%;
 	height: auto;
 	margin-left: auto;
@@ -20,6 +20,13 @@ nav {
 	background-color: darkorange;
 	height: 150px;
 	margin: 0;
+	text-align: center;
+}
+
+
+.log {
+	width: 200px;
+	height: 150px;
 }
 
 /*div {
