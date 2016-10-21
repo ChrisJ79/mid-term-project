@@ -243,12 +243,11 @@ input {
 }*/
 
 
-/***************** Section 3: Timber List *****************/
+/***************** Section 3: Timber Input List *****************/
 
 
 .timber-list {
-	overflow: scroll;
-
+	box-sizing: border-box;
 }
 
 /*.control-group {
@@ -273,15 +272,6 @@ input {
 	text-align: center;
 }
 
-.add-button-div {
-	width: 30%;
-	float: right;
-	/*margin-right: 45%;*/
-
-}
-
-
-
 .input11 {
 	width: 90%;
 }
@@ -291,63 +281,18 @@ input {
 }
 
 
+.add-button-div {
+	width: 30%;
+	float: right;
+	/*margin-right: 45%;*/
 
-/********** TIMBER OPTION BUTTONS **********/
-
-.option-button-1 {
-	border-style: none;
-	border: 2px green solid;
-	border-radius: 8px;
-	/*float: left;*/
-	width: 80px;
-	height: 40px;
-	background-color: white;
-/*	border-style: none;*/
-/*	margin-left: 15px;
-    margin-right: 15px;*/
-    margin: 20px;
 }
 
-.option-button-2 {
-	border-style: none;
-	border: 2px orange solid;
-	border-radius: 8px;
-	/*float: left;*/
-	width: 80px;
-	height: 40px;
-	background-color: white;
-/*	border-style: none;*/
-/*	margin-left: 15px;
-    margin-right: 15px;*/
-    margin: 15px;
-}
 
-.option-button-3 {
-	border-style: none;
-	border: 2px #7c4e20 solid;
-	border-radius: 8px;
-	/*float: left;*/
-	width: 80px;
-	height: 40px;
-	background-color: white;
-/*	border-style: none;*/
-/*	margin-left: 15px;
-    margin-right: 15px;*/
-    margin: 15px;
-}
 
-/*.option-button-4 {
-	border-color: orange;
-	border-radius: 8px;
-	float: left;
-	width: 80px;
-	height: 40px;
-	background-color: white;
-	border-style: none;
-	margin-left: 15px;
-    margin-right: 15px;
-    margin: 15px;
-}*/
+
+
+
 
 /********** MODAL **********/
 
@@ -398,6 +343,84 @@ input {
     background-color: #3e8e41;
 }
 
+/********** TIMBER OPTION BUTTONS **********/
+
+.option-bubble-1 {
+	border-style: none;
+	border: 2px green solid;
+	border-radius: 8px;
+	/*float: left;*/
+	min-width: 80px;
+	min-height: 40px;
+	background-color: green;
+	color: white;
+/*	border-style: none;*/
+/*	margin-left: 15px;
+    margin-right: 15px;*/
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px;
+
+
+}
+
+.option-bubble-2 {
+	border-style: none;
+	border: 2px orange solid;
+	border-radius: 8px;
+	/*float: left;*/
+	min-width: 80px;
+	min-height: 40px;
+	background-color: orange;
+	color: white;
+/*	border-style: none;*/
+/*	margin-left: 15px;
+    margin-right: 15px;*/
+    margin: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.option-bubble-3 {
+	border-style: none;
+	border: 2px #7c4e20 solid;
+	border-radius: 8px;
+	/*float: left;*/
+	min-width: 80px;
+	min-height: 40px;
+	background-color: #7c4e20;
+	color: white;
+/*	border-style: none;*/
+/*	margin-left: 15px;
+    margin-right: 15px;*/
+    margin: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+
+.option-bubble-1, .option-bubble-2, .option-bubble-3:focus   {
+	outline: none;
+}
+
+
+
+
+/*.option-button-4 {
+	border-color: orange;
+	border-radius: 8px;
+	float: left;
+	width: 80px;
+	height: 40px;
+	background-color: white;
+	border-style: none;
+	margin-left: 15px;
+    margin-right: 15px;
+    margin: 15px;
+}*/
 
 
 
@@ -414,19 +437,12 @@ input {
 	width: 100%;
 }*/
 
-/*th tr {
-	width: 10%;
-	display: inline-block;
-}
+
 */
 table {
 	width: 100%;			
 }
 
-
-/*tr {
-	text-align: center;
-}*/
 
 th {
 	text-decoration: underline;
@@ -436,6 +452,7 @@ th {
 td {
 	border: 1px red dotted;
 }
+
 
 /*td {
 	text-align: center;
@@ -455,7 +472,7 @@ td {
 }*/
 
 
-/***************** Section 4: Get Quote ****************
+/**************** Section 4: Get Quote ****************/
 
 
 
@@ -464,10 +481,6 @@ td {
 	text-align: center;
 	clear: both;
 }
-
-/*.mod-button {
-}*/
-
 
 .my-btn {
 	background-color: darkorange;
