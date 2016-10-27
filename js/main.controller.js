@@ -11,6 +11,16 @@ angular.module("MyApp")
 		timber.species = ["#2/Btr. West Red Cedar", "#1/Btr. Douglas Fir"];
 		timber.texture = ["Rough-Sawn", "S4S", "Resawn/Sawsized", "Hand-Hewn", "Wire-Brushed", "Hand-Hewn & Wirebrushed"];
 		timber.moisture = ["Green", "Kiln-Dried"];
+
+
+		// timber.item = 
+		// timber.qty = 
+		// timber.boardFeet = 
+		// timber.inStock = 
+		// timber.price = 
+		// timber.linePrice = 
+		// timber.subTotal = 
+
     	
 
 		timber.addTimber = function() {
@@ -19,7 +29,11 @@ angular.module("MyApp")
 					texture: timber.newTexture,
 					moisture: timber.newMoisture,
 					size: timber.newSize,
-					quantity: timber.newQuantity
+					quantity: timber.newQuantity,
+					item: timber.newLine
+					
+
+
 				});
 				timber.woodList.push({
 					species: timber.newSpecies,
@@ -28,6 +42,16 @@ angular.module("MyApp")
 					size: timber.newSize,
 					quantity: timber.newQuantity
 				})
+			}
+
+			timber.sorter = function(prop) {
+				if (timber.sort === prop) {
+					timber.desc = !timber.desc	
+				} else {
+					timber.desc = false
+				}
+
+				timber.sort = prop;
 			}
 
 
