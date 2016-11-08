@@ -6,11 +6,12 @@ var mongoose = require('mongoose');
 
 var quoteSchema = mongoose.Schema({
     name : {type : String, required : true},
-    jobName : {},
-    contactName : {},
-    contactPhoneNumber : {},
+    jobName : {type : String, required : true},
+    contactName : {type : String, required : true},
+    contactPhoneNumber : {type : String, required : true},
     emailAddress : {type : String, default : 'me@something.com'},
-    notes : {},
+    notes : {type : String, required : false},
+    // What else needs to go here?
 
 });
 
