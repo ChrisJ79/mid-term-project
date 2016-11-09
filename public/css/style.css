@@ -88,9 +88,11 @@ form {
 .input5 {
 	width: 90%;
 }
-
 .input6 {
-	height: 110px;
+	width: 90%;
+}
+.input7 {
+	height: 68px;
 	margin-top: 10px;
 	resize: none;
 	border-top: none;
@@ -327,7 +329,7 @@ input {
     /*margin-left: 40px;*/
     min-width: 160px;
     text-align: center;
-    margin: 0px 20px;    
+    margin: 0px 20px;
 }
 
 .dropdown-content {
@@ -532,7 +534,7 @@ td {
   padding: 1em;
   display:table-cell;
   vertical-align:middle;
-} 
+}
 
 #drag-elements {
   display: block;
@@ -684,4 +686,3 @@ h3 {
 .my-btn:hover {
 	background-color: #ff7700;
 }
-
