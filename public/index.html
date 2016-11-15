@@ -6,36 +6,18 @@
     <head>
         <meta charset="utf-8">
         <title>Mid-Term Project</title>
-
                 <!--style.css-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
                 <!--normalize.css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet" type="text/css">
-
                 <!--bootstrap.css(cdn)-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
-
-        <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
-
-                <!--dragula.css-->
-        <link href='dist/dragula.css' rel='stylesheet' type='text/css' />
-
                 <!--jquery.js/cdn-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" type="text/javascript"></script>
-
                 <!--bootstrap.js/cdn-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js" type="text/javascript"></script>
-
                 <!--angular.js/cdn-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-
-                <!--dragula.js-->
-        <script src='dist/dragula.js' type="text/javascript"></script>
-
-                <!--jquery.sortable-->
-        <script src='js/jquery-sortable.js'></script>
-
                 <!--.js files-->
         <script src="js/module.js" type="text/javascript"></script>
         <script src="js/main.controller.js" type="text/javascript"></script>
@@ -268,26 +250,28 @@
     <button id="species" class="option-bubble-1">{{timber.newSpecies}}</button>
     <button class="option-bubble-2">{{timber.newTexture}}</button>
     <button class="option-bubble-3">{{timber.newMoisture}}</button>
+    <p id="demo"></p>
     <form action="">
         <div class="control-group">
             <div class="left-tim-input">
                 <label class="control-label" for=""></label>
-                <input class="input11" ng-model="timber.newSize" type="text" name="Timber Size Entry" placeholder="Enter Timber Size">
-                <h1  ng-cloak="" ng-repeat="size in timber.sizes track by $index">{{size}}</h1>
+                <input class="input11" ng-model="timber.newSize" id="timber-entry" type="number" name="Timber Size Entry" placeholder="Enter Timber Size">
+                <h1 ng-repeat="size in timber.sizes track by $index">{{size}}</h1>
             </div>
             <div class="right-tim-input">
                 <label class="control-label" for=""></label>
-                <input class="input12" ng-model="timber.newQuantity" type="text" name="Timber Quantity Entry" placeholder="Enter Quantity">
-                <h1  ng-cloak="" ng-repeat="quantity in timber.qty track by $index">{{quantity}}</h1>
+                <input class="input12" ng-model="timber.newQuantity" type="number" name="Timber Quantity Entry" placeholder="Enter Quantity">
+                <h1 ng-repeat="quantity in timber.qty track by $index">{{quantity}}</h1>
 <!--            <div>
                     <button ng-click="timber.addQty()" type="button" class="my-btn">Add Quantity</button>
                 </div> -->
             </div>
         </div>
         <div class="add-button-div">
-            <button ng-click="timber.addTimber()" type="button" class="my-btn">Add Timber</button>
+            <button ng-click="timber.addTimber()" type="reset" class="my-btn">Add Timber</button>
         </div>
     </form>
+    <p id="output">Result: </p>
 </section>
 
 
@@ -304,6 +288,8 @@
             <th align="center" width="5%"><h3><small>Total</small></h3></th>
             <th align="center" width="5%"><h3><small>Sub-Total</small></h3></th>
         </tr>
+
+
        <!--  <tr>
             <td width="1%"><h3>1</h3></td>
             <td width="10%"><h3>10x10x32 #1/Btr. Douglas Fir</h3></td>
@@ -324,6 +310,8 @@
             <td width="5%"><h3></h3></td>
             <td width="5%"><h3></h3></td>
         </tr> -->
+
+
         <tr ng-repeat="timber in timber.woodList | orderBy : timber.sort : timber.desc">
             <td width="3%" class="edit-del small"><h3><a href=""><small>edit&nbsp;</small></a><a href=""><small>&nbsp;delete</small></h3></a></td>
             <td width="2%" class=""><h3>{{$index+1}}</h3></td>
