@@ -5,7 +5,7 @@
 var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
-    cookieParser = require('cookie-parser');
+    cookieParser = require('cookie-parser'),
     Routes = require('./routes'),
     PORT = process.env.PORT || 3000;
 
@@ -29,16 +29,16 @@ app.get('/', function(req, res) {
     res.sendFile("index.html", { root: './mid-term-project/public' });
 });
 
+//??
 app.listen(PORT, () => {
     console.log('Server is running on PORT:', PORT);
 });
 
 
-
-
-
-
+// Is this all I need to get a response??
 res.send('A response has been sent!!!');
+
+
 
 // what about sessions??
 

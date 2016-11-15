@@ -1,15 +1,11 @@
 
 //routes
 
-var user = require(.controllers/controller.js);
+//??
+var user = require('./controllers/controller.js');
 
+//??
 module.exports = (app) => {
-    //app.get
-    //app.post
-};
+    app.get('/', controller.index);
 
-// what goes here??
-// module.exports = (app) => {
-//     app.get('/', (req, res) => {
-//         res.send("I wanna be like KANYE!!!!");
-//     });
+};
