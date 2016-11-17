@@ -29,37 +29,37 @@
     <body ng-cloak="" ng-controller="TimberCtrl as timber">
         <nav>
             <div>
-                <img class="log" src="images/ren.jpg">
+                <img class="top-pic" src="images/black-cabin.png">
             </div>
         </nav>
 
 <!-- CUSTOMER INFO SECTION -->
 
         <h1 class="cust-header">CUSTOMER INFO</h1>
-        <section class="cust-info">
+        <section class="cust-info center">
             <form action="" class="form-horizontal left-input">
                 <div class="control-group name">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input1" type="text" name="Customer Name" placeholder="Enter Customer Name" autofocus="">
+                        <input class="input1 input-lg focusedInput" type="text" name="Customer Name" placeholder="Enter Customer Name" autofocus="">
                     </div>
                 </div>
                 <div class="control-group job-name">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input2" type="text" name="Job Name" placeholder="Enter Job Name">
+                        <input class="input2 input-lg focusedInput" type="text" name="Job Name" placeholder="Enter Job Name">
                     </div>
                 </div>
                 <div class="control-group contact-name">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input3" type="text" name="Contact Name" placeholder="Contact Name">
+                        <input class="input3 input-lg focusedInput" type="text" name="Contact Name" placeholder="Contact Name">
                     </div>
                 </div>
                 <div class="control-group contact-phone">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input4" type="text" name="Contact Phone Number" placeholder="Contact Phone Number">
+                        <input class="input4 input-lg focusedInput" type="text" name="Contact Phone Number" placeholder="Contact Phone Number">
                     </div>
                 </div>
             </form>
@@ -67,19 +67,19 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input5" type="text" name="Customer Email" placeholder="Enter Email Address">
+                        <input class="input5 input-lg focusedInput" type="text" name="Customer Email" placeholder="Enter Email Address">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <input class="input6" type="text" name="Customer Email" placeholder="Quote delivered to:">
+                        <input class="input6 input-lg focusedInput" type="text" name="Customer Email" placeholder="Quote delivered to:">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for=""></label>
-                        <textarea class="input7" type="text" name="Notes" placeholder="Enter All Notes & Details Here!"></textarea>
+                        <textarea class="input7 input-lg focusedInput" type="text" name="Notes" placeholder="Enter All Notes & Details Here!"></textarea>
                     </div>
                 </div>
             </form>
@@ -87,28 +87,28 @@
 
 <!-- TIMBER INFO SECTION -->
 
-        <section class="timber-info">
+        <section class="timber-info center">
             <div class="optionselect">
-                    <select class=" dropbtn1 input-lg" ng-options="type as type for type in timber.species" ng-model="timber.newSpecies">
+                    <select class=" dropbtn1 input-lg focusedInput" ng-options="type as type for type in timber.species" ng-model="timber.newSpecies">
                         <option value="" disabled selected>Species</option>
                     </select>
-                    <select class="dropbtn2 input-lg" ng-options="type as type for type in timber.texture" ng-model="timber.newTexture">
+                    <select class="dropbtn2 input-lg focusedInput" ng-options="type as type for type in timber.texture" ng-model="timber.newTexture">
                         <option value="" disabled selected>Texture</option>
                     </select>
-                    <select class="dropbtn3 input-lg" ng-options="type as type for type in timber.moisture" ng-model="timber.newMoisture">
+                    <select class="dropbtn3 input-lg focusedInput" ng-options="type as type for type in timber.moisture" ng-model="timber.newMoisture">
                         <option value="" disabled selected>Moisture</option>
                     </select>
             </div>
-            <form class="quantity "action="">
+            <form class="quantity" action="">
                     <div class="control-group">
                         <div class="left-tim-input">
                             <label class="control-label" for=""></label>
-                            <input class="input11" ng-model="timber.newSize" id="timber-entry" type="text" name="Timber Size Entry" placeholder="Enter Timber Size">
+                            <input class="input11 input-lg focusedInput" ng-model="timber.newSize" id="timber-entry" type="text" name="Timber Size Entry" placeholder="Enter Timber Size">
                             <h1 ng-repeat="size in timber.sizes track by $index">{{size}}</h1>
                         </div>
                         <div class="right-tim-input">
                             <label class="control-label" for=""></label>
-                            <input class="input12" ng-model="timber.newQuantity" type="text" name="Timber Quantity Entry" placeholder="Enter Quantity">
+                            <input class="input12 input-lg focusedInput" ng-model="timber.newQuantity" type="text" name="Timber Quantity Entry" placeholder="Enter Quantity">
                             <h1 ng-repeat="quantity in timber.qty track by $index">{{quantity}}</h1>
                         </div>
                     </div>
