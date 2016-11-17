@@ -5,8 +5,6 @@
 	padding:0px;
 }
 
-
-
 body {
 max-width: 100%;
 margin: 0 auto !important;
@@ -22,6 +20,7 @@ nav {
 	margin: 0;
 	text-align: center;
 }
+
 
 
 .log {
@@ -43,7 +42,7 @@ nav {
 }*/
 
 
-/***************** Section 1: Customer Info *****************/
+/**************** SECTION 1: CUSTOMER INFO ****************/
 
 .cust-header {
 	margin-left: 20px;
@@ -103,7 +102,6 @@ form {
 	width: 90%;
 }
 
-
 .control-label {
 	font-size: 28px;
 }
@@ -117,8 +115,6 @@ input {
 	height: 32px;
 }
 
-
-
 /*input[type=text]:focus, textarea:focus {
 	box-shadow: 0 0 5px darkorange;
 	padding: 3px 0px 3px 3px;
@@ -131,18 +127,11 @@ input {
     box-shadow: 0 0 5px darkorange;
 }*/
 
-
-
 .cust-info {
 	/*text-align: center;*/
 }
 
-.control-label {
-/*	margin-right: 25px;*/
-}
-
 .controls {
-
 }
 
 .timber-header {
@@ -151,7 +140,7 @@ input {
 }
 
 
-/***************** Section 2: Timber Details *****************/
+/**************** SECTION 2: TIMBER INFO ****************/
 
 /*.modal-body {
 	flex-direction: row;
@@ -161,13 +150,17 @@ input {
 	align-content: stretch;
 }*/
 
+.option-select {
+	height: 50px;
+	/*position: absolute;*/
+}
+
 .pop-up {
 	text-align: center;
 }
 
 .tim-img {
 	margin-right: 15px;
-
 }
 
 .details-button {
@@ -177,15 +170,14 @@ input {
 	border-radius: 8px;
 }
 
-.modal-content {
+/*.modal-content {
 	width: 900px;
 	text-align: left;
-}
+}*/
 
 /*.timber-details {
 	height: 100%;
 }*/
-
 
 
 /*.option-dropdowns {
@@ -198,7 +190,6 @@ input {
 	align-items: center;
 	align-content: stretch;
 }*/
-
 
 
 /*.option-dropdowns > li {
@@ -225,9 +216,6 @@ input {
 /*.dropdown {
 	text-align: center;
 }*/
-
-
-
 
 
 /*.left-details {
@@ -258,16 +246,77 @@ input {
 	width: 85%;
 }*/
 
-
-/***************** Section 3: Timber Input List *****************/
-
-
-.timber-list {
-	box-sizing: border-box;
-}
-
 /*.control-group {
 	float: left;
+}*/
+
+
+.dropbtn1 {
+	width: 260px;
+    background: green;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	margin: 10px 5px 50px 5px;
+}
+
+.dropbtn2 {
+	width: 260px;
+    background: darkorange;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	margin: 10px 5px 50px 5px;
+}
+
+.dropbtn3 {
+	width: 260px;
+    background: #7c4e20;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	margin: 10px 5px 50px 5px;
+}
+
+.dropdown {
+    /*position: relative;
+    display: inline-block;
+    min-width: 160px;
+    text-align: center;
+    margin: 0px 20px;*/
+}
+
+/*.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}*/
+
+/*.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}*/
+
+/*.dropdown-content a:hover {
+	background-color: #f1f1f1
+}*/
+
+/*.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+/*.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }*/
 
 .left-tim-input {
@@ -278,7 +327,6 @@ input {
 	float: left;
 	text-align: center;
 }
-
 
 .right-tim-input {
 	width: 32%;
@@ -296,70 +344,14 @@ input {
 	width: 90%;
 }
 
-
 .add-button-div {
 	width: 30%;
 	float: right;
 	/*margin-right: 45%;*/
-
 }
 
 
-
-
-
-
-
-/********** MODAL **********/
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-
-    /*margin-left: 40px;*/
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    /*margin-left: 40px;*/
-    min-width: 160px;
-    text-align: center;
-    margin: 0px 20px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    /*margin-left: 40px;*/
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    /*margin-left: 40px;*/
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-/********** TIMBER OPTION BUTTONS **********/
+/*** TIMBER OPTION BUBBLES (Deleted)***/
 
 .option-bubble-1 {
 	border-style: none;
@@ -377,18 +369,16 @@ input {
     display: inline-block;
     box-sizing: border-box;
     padding: 6px;
-
-
 }
 
 .option-bubble-2 {
 	border-style: none;
-	border: 2px orange solid;
+	border: 2px darkorange solid;
 	border-radius: 8px;
 	/*float: left;*/
 	min-width: 80px;
 	min-height: 40px;
-	background-color: orange;
+	background-color: darkorange;
 	color: white;
 /*	border-style: none;*/
 /*	margin-left: 15px;
@@ -417,13 +407,9 @@ input {
     padding: 6px;
 }
 
-
 .option-bubble-1, .option-bubble-2, .option-bubble-3:focus   {
 	outline: none;
 }
-
-
-
 
 /*.option-button-4 {
 	border-color: orange;
@@ -439,21 +425,17 @@ input {
 }*/
 
 
+/**************** SECTION 3:  DATA TABLE ****************/
 
-/********** TABLE **********/
+.data-table {
+	/*box-sizing: border-box;*/
+}
 
 .populate-table {
 	clear: both;
 	margin-left: 40px;
 	margin-right: 40px;
 }
-
-/*table {
-	text-align: center;
-	width: 100%;
-}*/
-
-
 
 table {
 	width: 100%;
@@ -486,8 +468,6 @@ a:hover, a:focus {
 	color: red;
 }
 
-
-
 th {
 /*	text-decoration: underline;*/
 	/*border: 1px blue dotted;*/
@@ -499,8 +479,7 @@ td {
 }
 
 
-
-/**********************************************/
+/**********************EXTRA/DELETED STUFF************************/
 
 /*.container {
   max-width: 960px;
@@ -672,7 +651,7 @@ h3 {
 }
 
 .my-btn {
-	background-color: darkorange;
+	background-color: dodgerblue;
 	text-align: center;
 	height: 46px;
 	width: 122px;
@@ -686,3 +665,7 @@ h3 {
 .my-btn:hover {
 	background-color: #ff7700;
 }
+
+.my-btn:focus {
+		text-decoration: none !important;
+	}

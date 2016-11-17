@@ -33,7 +33,9 @@
             </div>
         </nav>
 
-      <h1 class="cust-header">CUSTOMER INFO</h1>
+<!-- CUSTOMER INFO SECTION -->
+
+        <h1 class="cust-header">CUSTOMER INFO</h1>
         <section class="cust-info">
             <form action="" class="form-horizontal left-input">
                 <div class="control-group name">
@@ -83,6 +85,40 @@
             </form>
         </section>
 
+<!-- TIMBER INFO SECTION -->
+
+        <section class="timber-info">
+            <div class="optionselect">
+                    <select class=" dropbtn1 input-lg" ng-options="type as type for type in timber.species" ng-model="timber.newSpecies">
+                        <option value="" disabled selected>Species</option>
+                    </select>
+                    <select class="dropbtn2 input-lg" ng-options="type as type for type in timber.texture" ng-model="timber.newTexture">
+                        <option value="" disabled selected>Texture</option>
+                    </select>
+                    <select class="dropbtn3 input-lg" ng-options="type as type for type in timber.moisture" ng-model="timber.newMoisture">
+                        <option value="" disabled selected>Moisture</option>
+                    </select>
+            </div>
+            <form class="quantity "action="">
+                    <div class="control-group">
+                        <div class="left-tim-input">
+                            <label class="control-label" for=""></label>
+                            <input class="input11" ng-model="timber.newSize" id="timber-entry" type="text" name="Timber Size Entry" placeholder="Enter Timber Size">
+                            <h1 ng-repeat="size in timber.sizes track by $index">{{size}}</h1>
+                        </div>
+                        <div class="right-tim-input">
+                            <label class="control-label" for=""></label>
+                            <input class="input12" ng-model="timber.newQuantity" type="text" name="Timber Quantity Entry" placeholder="Enter Quantity">
+                            <h1 ng-repeat="quantity in timber.qty track by $index">{{quantity}}</h1>
+                        </div>
+                    </div>
+                <div class="add-button-div">
+                    <button ng-click="timber.addTimber()" type="reset" class="my-btn">Add Timber</button>
+                </div>
+            </form>
+        </section>
+
+
 <!--         <h1 class="timber-header">TIMBER LIST</h1>
         <section class="timber-details">
             <form action="" class="form-horizontal left-details">
@@ -108,32 +144,35 @@
 
 
 
-            <!-- Button trigger modal -->
-            <section class="pop-up">
-                <h2>Click Here to Enter Timber Details!</h2>
-                <img class="tim-img"src="images/right-arrow.png" alt="">
+            <!-- Button section to trigger modal! -->
 
-<!--                 <button type="button mod-button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Click Here to Enter Timber Details!
+            <!-- <section class="pop-up">
+                <h2>Click Here to Enter Timber Details!</h2>
+                <img class="tim-img"src="images/right-arrow.png" alt=""> -->
+
+<!-- Button option with log image -->
+                <!-- <button type="button mod-button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Click Here to Enter Timber Details!
                 </button> -->
 
-                <button class="details-button" data-target="#myModal" data-toggle="modal">
+<!-- Regular Bootstrap button -->
+                <!-- <button class="details-button" data-target="#myModal" data-toggle="modal">
                     <img src="images/log.png" alt="">
-                </button>
-            </section>
+                </button> -->
+            <!-- </section> -->
 
-            <!--- Modal -->
 
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
+            <!--- Timber Option Section (or Modal Section...)-->
+
+            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
+                <!-- <div class="modal-dialog" role="document"> -->
+                    <!-- <div class="modal-content"> -->
+                        <!-- <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">Timber Details</h4>
-                        </div>
+                        </div> -->
 
-                        <div class="modal-body">
 
-                            <div class="dropdown">
+
                                <!--  <button ng-repeat="type in timber.species track by $index" class="dropbtn">{{type}}</button> -->
 <!--                                 <div class="dropdown-content">
                                     <a href="#" ng-click="timber.addSpecies()" ng-model="timber.newSpecies" ng-show="timber.newSpecies">#2 Western Red Cedar</a>
@@ -145,10 +184,7 @@
                                     <option value="Doug Fir" ng-click="timber.addSpecies()" ng-model="timber.newSpecies">#1 Douglas Fir</option>
                                 </select> -->
 
-                                <select class="dropbtn" ng-options="type as type for type in timber.species" ng-model="timber.newSpecies">
-                                    <option value="" disabled selected>Species</option>
-                                </select>
-                            </div>
+
                             <!-- <div class="dropdown">
                                 <button class="dropbtn">Surface Texture</button>
                                 <div class="dropdown-content">
@@ -169,23 +205,10 @@
                                 </div>
                             </div> -->
 
-                            <div class="dropdown">
-                                <select class="dropbtn" ng-options="type as type for type in timber.texture" ng-model="timber.newTexture">
-                                    <option value="" disabled selected>Texture</option>
-                                </select>
-                            </div>
-                            <div class="dropdown">
-                                <select class="dropbtn" ng-options="type as type for type in timber.moisture" ng-model="timber.newMoisture">
-                                    <option value="" disabled selected>Moisture</option>
-                                </select>
-                            </div>
 
 
 
-
-
-
-
+<!-- Old bootstrap dropdown that wouldn't work with angular... -->
 
 <!--                             <ul class="option-dropdowns">
                                 <li class="cat">
@@ -219,7 +242,8 @@
                                 </li>
                                 <li class="cat">
                                     <div class="dropdown">
-                                        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">
+                                        <button id="dLabel" type="button" data-toggle="dropdown"
+                                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">
                                             Moisture-Content
                                             <span class="caret"></span>
                                         </button>
@@ -231,104 +255,75 @@
                                 </li>
                             </ul> -->
 
-                            <div class="modal-footer">
+                            <!-- <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+
+
+<!-- DATA TABLE SECTION -->
+
+        <section class="data-table">
+        <!-- timber option bubbles -->
+        <!-- <button id="species" class="option-bubble-1">{{timber.newSpecies}}</button>
+        <button class="option-bubble-2">{{timber.newTexture}}</button>
+        <button class="option-bubble-3">{{timber.newMoisture}}</button> -->
+            <div class="populate-table table-responsive">
+                <table class="table">
+                    <tr>
+                        <th align="center" width="3%"><h3><small></small></h3></th>
+                        <th ng-click="timber.sorter('line')" align="center" width="2%"><h3><small>Line</small></h3></th>
+                        <th ng-click="timber.sorter('item')" align="center" width="10%"><h3><small>Item</small></h3></th>
+                        <th ng-click="timber.sorter('quantity')" align="center" width="2%"><h3><small>Qty</small></h3></th>
+                        <th align="center" width="4%"><h3><small>Board Feet</small></h3></th>
+                        <th align="center" width="2%"><h3><small>In Stock</small></h3></th>
+                        <th align="center" width="4%"><h3><small>Price</small></h3></th>
+                        <th align="center" width="5%"><h3><small>Total</small></h3></th>
+                        <th align="center" width="5%"><h3><small>Sub-Total</small></h3></th>
+                    </tr>
+
+            <!-- hardcoded table data -->
+                   <!--  <tr>
+                        <td width="1%"><h3>1</h3></td>
+                        <td width="10%"><h3>10x10x32 #1/Btr. Douglas Fir</h3></td>
+                        <td width="1%"><h3>20</h3></td>
+                        <td width="4%"><h3>5333.33</h3></td>
+                        <td width="2%"><h3>Y</h3></td>
+                        <td width="4%"><h3>$2500/m</h3></td>
+                        <td</p> width="5%"><h3>$13,333.33</h3></td><p>
+                        <td width="5%"><h3>$13,333.33</h3></td>
+                    </tr>
+                    <tr>
+                        <td width="1%"><h3>2</h3></td>
+                        <td width="10%"><h3></h3></td>
+                        <td width="1%"><h3></h3></td>
+                        <td width="4%"><h3></h3></td>
+                        <td width="2%"><h3></h3></td>
+                        <td width="4%"><h3></h3></td>
+                        <td width="5%"><h3></h3></td>
+                        <td width="5%"><h3></h3></td>
+                    </tr> -->
+
+                    <tr ng-repeat="timber in timber.woodList | orderBy : timber.sort : timber.desc">
+                        <td width="3%" class="edit-del small"><h3><a href=""><small>edit&nbsp;</small></a><a href=""><small>&nbsp;delete</small></h3></a></td>
+                        <td width="2%" class=""><h3>{{$index+1}}</h3></td>
+                        <td width="10%" class=""><h3>{{timber.size}} {{timber.species}}</h3></td>
+                        <td width="2%" class=""><h3>{{timber.quantity}}</h3></td>
+                        <td width="4%" class=""><h3>5333.33</h3></td>
+                        <td width="2%" class=""><h3>Y</h3></td>
+                        <td width="4%" class=""><h3>$2500/m</h3></td>
+                        <td width="5%" class=""><h3>$13,333.33</h3></td>
+                        <td width="5%" class=""><h3>$13,333.33</h3></td>
+                    </tr>
+                </table>
             </div>
-
-
-<section class="timber-list">
-
-    <button id="species" class="option-bubble-1">{{timber.newSpecies}}</button>
-    <button class="option-bubble-2">{{timber.newTexture}}</button>
-    <button class="option-bubble-3">{{timber.newMoisture}}</button>
-    <p id="demo"></p>
-    <form action="">
-        <div class="control-group">
-            <div class="left-tim-input">
-                <label class="control-label" for=""></label>
-                <input class="input11" ng-model="timber.newSize" id="timber-entry" type="number" name="Timber Size Entry" placeholder="Enter Timber Size">
-                <h1 ng-repeat="size in timber.sizes track by $index">{{size}}</h1>
+            <div class="get-quote">
+                <button ng-click="" type="button" class="my-btn">Get Quote!</button>
             </div>
-            <div class="right-tim-input">
-                <label class="control-label" for=""></label>
-                <input class="input12" ng-model="timber.newQuantity" type="number" name="Timber Quantity Entry" placeholder="Enter Quantity">
-                <h1 ng-repeat="quantity in timber.qty track by $index">{{quantity}}</h1>
-<!--            <div>
-                    <button ng-click="timber.addQty()" type="button" class="my-btn">Add Quantity</button>
-                </div> -->
-            </div>
-        </div>
-        <div class="add-button-div">
-            <button ng-click="timber.addTimber()" type="reset" class="my-btn">Add Timber</button>
-        </div>
-    </form>
-    <p id="output">Result: </p>
-</section>
-
-
-<section class="populate-table table-responsive">
-    <table class="table">
-        <tr>
-            <th align="center" width="3%"><h3><small></small></h3></th>
-            <th ng-click="timber.sorter('line')" align="center" width="2%"><h3><small>Line</small></h3></th>
-            <th ng-click="timber.sorter('item')" align="center" width="10%"><h3><small>Item</small></h3></th>
-            <th ng-click="timber.sorter('quantity')" align="center" width="2%"><h3><small>Qty</small></h3></th>
-            <th align="center" width="4%"><h3><small>Board Feet</small></h3></th>
-            <th align="center" width="2%"><h3><small>In Stock</small></h3></th>
-            <th align="center" width="4%"><h3><small>Price</small></h3></th>
-            <th align="center" width="5%"><h3><small>Total</small></h3></th>
-            <th align="center" width="5%"><h3><small>Sub-Total</small></h3></th>
-        </tr>
-
-
-       <!--  <tr>
-            <td width="1%"><h3>1</h3></td>
-            <td width="10%"><h3>10x10x32 #1/Btr. Douglas Fir</h3></td>
-            <td width="1%"><h3>20</h3></td>
-            <td width="4%"><h3>5333.33</h3></td>
-            <td width="2%"><h3>Y</h3></td>
-            <td width="4%"><h3>$2500/m</h3></td>
-            <td</p> width="5%"><h3>$13,333.33</h3></td><p>
-            <td width="5%"><h3>$13,333.33</h3></td>
-        </tr>
-        <tr>
-            <td width="1%"><h3>2</h3></td>
-            <td width="10%"><h3></h3></td>
-            <td width="1%"><h3></h3></td>
-            <td width="4%"><h3></h3></td>
-            <td width="2%"><h3></h3></td>
-            <td width="4%"><h3></h3></td>
-            <td width="5%"><h3></h3></td>
-            <td width="5%"><h3></h3></td>
-        </tr> -->
-
-
-        <tr ng-repeat="timber in timber.woodList | orderBy : timber.sort : timber.desc">
-            <td width="3%" class="edit-del small"><h3><a href=""><small>edit&nbsp;</small></a><a href=""><small>&nbsp;delete</small></h3></a></td>
-            <td width="2%" class=""><h3>{{$index+1}}</h3></td>
-            <td width="10%" class=""><h3>{{timber.size}} {{timber.species}}</h3></td>
-            <td width="2%" class=""><h3>{{timber.quantity}}</h3></td>
-            <td width="4%" class=""><h3>5333.33</h3></td>
-            <td width="2%" class=""><h3>Y</h3></td>
-            <td width="4%" class=""><h3>$2500/m</h3></td>
-            <td width="5%" class=""><h3>$13,333.33</h3></td>
-            <td width="5%" class=""><h3>$13,333.33</h3></td>
-        </tr>
-    </table>
-</section>
-
-
-
-
-
-        <section class="get-quote">
-            <button ng-click="" type="button" class="my-btn">Get Quote!</button>
         </section>
-
     </body>
 </html>
