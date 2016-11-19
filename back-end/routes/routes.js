@@ -1,6 +1,8 @@
 
 //routes
 
+'use strict';
+
 //??
 var user = require('./controllers/controller.js');
 

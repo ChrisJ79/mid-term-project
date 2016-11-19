@@ -1,6 +1,8 @@
 
 // authentication page in data/model.
 
+'use strict';
+
 //require mongoose
 var mongoose = require('mongoose');
 

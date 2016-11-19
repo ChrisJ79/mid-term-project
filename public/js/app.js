@@ -1,4 +1,5 @@
 
+'use strict';
 
 // Board Footage Calculator Code
 // var calculateBF = function() {

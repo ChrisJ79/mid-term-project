@@ -1,4 +1,6 @@
 
+'use strict';
+
 angular.module("MyApp")
     .controller("TimberCtrl", timberCtrl);
 
