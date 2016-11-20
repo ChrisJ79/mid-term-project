@@ -10,22 +10,27 @@ var path = require('path');
     // bodyParser = require('body-parser');
     // cookieParser = require('cookie-parser');
     // Routes = require('./routes');
-    // PORT = process.env.PORT || 3000;*******
+var PORT = process.env.PORT || 3000;
     // app.get('/', function(request, response) {
     //     response.send("I'm working!");
     // });
 
-
-
-
 // 2) Create an 'instance' that will be used to set up Middleware
 var app = express();
+
+
+app.get('/', function(req, res) {
+    // res.sendFile(path.join(__dirname + 'index.html'));
+    res.sendFile(path.join(__dirname + 'index.html'));
+});
+
 
 // 3) Define the port to run on
 app.set('port', 3000);
 
 // 5) Configure Express to serve the static files the 'Public' directory, which inclues index.html.
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static('public'));
 
 // 4) Configure the app to listen on Port 3000
 var server = app.listen(app.get('port'), function() {
